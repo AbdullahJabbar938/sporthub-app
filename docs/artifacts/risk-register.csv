@@ -1,0 +1,23 @@
+Risk ID,Category,Risk Description,Probability (1-5),Impact (1-5),Risk Score,Mitigation Strategy,Contingency Plan,Owner,Status,Sprint
+R-001,Technical,Google Maps API cost exceeding free tier,2,3,6,Implement caching, switch to OpenStreetMap,Backend Dev,Monitoring,Sprint 2
+R-002,Technical,MongoDB connection instability,3,4,12,Connection pooling, retry logic,Local fallback,Backend Dev,Mitigated,Sprint 1
+R-003,Technical,JWT token security vulnerability,2,5,10,Strong secret, short expiration,Refresh tokens,Security Lead,Mitigated,Sprint 1
+R-004,Technical,API rate limiting issues,3,3,9,Implement rate limiting,Cache frequent requests,Backend Dev,Monitoring,Sprint 3
+R-005,Technical,Browser compatibility issues,4,3,12,Cross-browser testing,Fallback UI,Frontend Dev,Active,Sprint 4
+R-006,Technical,Mobile responsiveness failures,4,4,16,Mobile-first design,Simplified mobile version,Frontend Dev,Active,Sprint 4
+R-007,Technical,Database query performance,3,3,9,Indexes, optimize,Redis caching,Backend Dev,Monitoring,Sprint 3
+R-008,Schedule,Timeline slippage,4,4,16,20% buffer, daily tracking,Cut features,Project Manager,Monitoring,Sprint 1
+R-009,Scope,Scope creep,5,5,25,MoSCoW, weekly review,Freeze features,Product Owner,Active,Sprint 1
+R-010,Resource,Developer burnout,4,4,16,Strict hours, breaks,Extend timeline,Self,Monitoring,Sprint 1
+R-011,Process,Agile process not followed,3,4,12,Daily stand-ups, retrospectives,Review principles,Scrum Master,Mitigated,Sprint 1
+R-012,External,Low user adoption for testing,4,4,16,Recruit testers, fake data,Automated tests,Product Owner,Active,Sprint 2
+R-013,External,Location accuracy issues,3,3,9,Manual entry backup,Postal code fallback,UX Designer,Implemented,Sprint 4
+R-014,Legal,Data privacy compliance (GDPR),2,5,10,Privacy policy, consent,Anonymize data,Legal,Planning,Sprint 4
+R-015,External,GitHub repository loss,1,5,5,Daily commits, backups,Cloud backup,Self,Mitigated,Sprint 1
+R-016,External,Jira/Zephyr outage,2,3,6,Excel backups,Alternative tracking,Self,Monitoring,Sprint 2
+R-017,Dependency,Node.js vulnerabilities,3,4,12,npm audit weekly,Pin versions,Backend Dev,Active,Sprint 1
+R-018,Dependency,React breaking changes,2,3,6,Lock version, test updates,Document versions,Frontend Dev,Monitoring,Sprint 4
+R-019,Dependency,Google Maps downtime,2,4,8,Graceful degradation,Show address text,Backend Dev,Planning,Sprint 4
+R-020,Quality,Insufficient test coverage,3,4,12,TDD, 80% target,Critical path tests,QA Lead,Monitoring,Sprint 1
+R-021,Quality,UI/UX inconsistencies,3,3,9,Style guide, component library,Peer review,UX Designer,Planning,Sprint 4
+R-022,Quality,Poor error handling,4,4,16,Global handler, user messages,Log errors,Backend Dev,Active,Sprint 2

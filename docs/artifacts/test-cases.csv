@@ -1,0 +1,44 @@
+ID,User Story,Test Description,Preconditions,Test Steps,Expected Result,Priority,Sprint
+TC-REG-001,US-01,Register with valid data,User not logged in,"1. Navigate to /register
+2. Enter valid name, email, password
+3. Click Register",Account created, auto-login, token stored,P0,Sprint 1
+TC-REG-002,US-01,Register with existing email,User with email exists,"1. Enter existing email
+2. Click Register",Error ""Email already registered"",P0,Sprint 1
+TC-REG-003,US-01,Register with invalid email,User not logged in,"1. Enter invalid email format
+2. Click Register",Error ""Please provide a valid email"",P1,Sprint 1
+TC-REG-004,US-01,Register with short password,User not logged in,"1. Enter password less than 8 chars
+2. Click Register",Error ""Password must be at least 8 characters"",P1,Sprint 1
+TC-LOG-001,US-02,Login with valid credentials,User registered,"1. Enter correct email/password
+2. Click Login",Logged in, redirected to home,P0,Sprint 1
+TC-LOG-002,US-02,Login with wrong password,User registered,"1. Enter correct email, wrong password
+2. Click Login",Error ""Invalid email or password"",P0,Sprint 1
+TC-LOG-003,US-02,Access protected route while logged out,Not logged in,"1. Try to access /dashboard",Redirected to /login,P0,Sprint 1
+TC-PRO-001,US-03,View profile,User logged in,"1. Navigate to /profile",See user details (name, email),P0,Sprint 1
+TC-PRO-002,US-03,Update profile name,User logged in,"1. Edit name
+2. Save",Name updates successfully,P0,Sprint 1
+TC-GAME-001,US-04,Create game with valid data,User logged in,"1. Fill all required fields
+2. Submit",Game created, redirected to details,P0,Sprint 2
+TC-GAME-002,US-04,Create game with past date,User logged in,"1. Select past date
+2. Submit",Error ""Date cannot be in the past"",P0,Sprint 2
+TC-GAME-003,US-04,Create game without location,User logged in,"1. Don't select location
+2. Submit",Error ""Location is required"",P1,Sprint 2
+TC-BROWSE-001,US-05,Browse all games,Games exist,"1. Go to browse page",See list of upcoming games,P0,Sprint 2
+TC-BROWSE-002,US-05,Browse with no games,No games in DB,"1. Go to browse page",See ""No games found"" message,P0,Sprint 2
+TC-DETAILS-001,US-06,View game details,Game exists,"1. Click on game from browse",See sport, date, location, map,P0,Sprint 2
+TC-DETAILS-002,US-06,View invalid game ID,No game with ID,"1. Go to /games/invalid-id",404 page, ""Game not found"",P1,Sprint 2
+TC-JOIN-001,US-07,Join game with available slots,User logged in, game open,"1. Click Join Game",User added to participants,P0,Sprint 3
+TC-JOIN-002,US-07,Join full game,Game at max capacity,"1. View full game",Join button disabled, ""Game Full"",P0,Sprint 3
+TC-JOIN-003,US-07,Join while logged out,Not logged in,"1. Try to join game",Redirected to login,P0,Sprint 3
+TC-LEAVE-001,US-08,Leave game,User joined game,"1. Click Leave
+2. Confirm",User removed from participants,P0,Sprint 3
+TC-LEAVE-002,US-08,Leave as organizer,User is organizer,"1. View own game",Leave button not visible,P0,Sprint 3
+TC-DASH-001,US-09,View My Games dashboard,User logged in,"1. Click ""My Games""",See Hosting and Joined tabs,P0,Sprint 3
+TC-DASH-002,US-09,Empty hosted games,User has no created games,"1. View Hosting tab",See ""Create Game"" button,P0,Sprint 3
+TC-LOC-001,US-10,Set location in profile,User logged in,"1. Go to profile
+2. Enter address
+3. Save",Location saved,P0,Sprint 4
+TC-LOC-002,US-11,Browse games near me,User has location set,"1. Toggle ""Near Me""",Games within radius shown,P0,Sprint 4
+TC-FILTER-001,US-12,Filter by single sport,Games exist,"1. Select ""Football"" filter",Only football games shown,P0,Sprint 4
+TC-CANCEL-001,US-13,Cancel game as organizer,User is organizer,"1. Click Cancel Game
+2. Confirm",Game cancelled, removed from browse,P0,Sprint 4
+TC-CANCEL-002,US-13,Cancel game as non-organizer,User not organizer,View game,Cancel button not visible,P1,Sprint 4
